@@ -1,7 +1,7 @@
 
 <div class="header-inner">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <h1><a href="/roomHome" class="navbar-brand"><img src="{{ asset('/img/logo.png')}}" alt="LiveRoom"></a></h1>
+    <h1><a href="/roomHome" class="navbar-brand"><img src="{{ secure_asset('/img/logo.png')}}" alt="LiveRoom"></a></h1>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
       <span class="navbar-toggler-icon"></span>
     </button>

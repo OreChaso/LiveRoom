@@ -1,3 +1,3 @@
 <div class="footer">
-  <p>CopyRight@</p>
+  <p>(c) 2021 LiveRoom</p>
 </div>

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{{ secure_asset('/css/footer.css') }}">
   <script src="{{ secure_asset('/js/app.js') }}"></script>
   <script src="https://kit.fontawesome.com/fe2ae2a4f6.js" crossorigin="anonymous"></script>
-  <title>Document</title>
+  <title>LiveRoom</title>
 </head>
 <body>
   <header>
