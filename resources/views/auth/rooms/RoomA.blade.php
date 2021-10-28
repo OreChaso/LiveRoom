@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('/storage/css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('/storage/css/header.css') }}">
-  <link rel="stylesheet" href="{{ asset('/storage/css/room.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
+  <link rel="stylesheet" href="{{ asset('/css/room.css') }}">
   <script src="{{ asset('/js/app.js') }}"></script>
   <script src="https://kit.fontawesome.com/fe2ae2a4f6.js" crossorigin="anonymous"></script>
   <title>Document</title>
@@ -50,7 +50,7 @@
   </section>
   <div class="sheet">
     <p>座席表</p>
-    <img src="{{ asset('/storage/img/room_501.png')}}" alt="">
+    <img src="{{ asset('/img/room_501.png')}}" alt="">
   </div>
 </body>
 <script>

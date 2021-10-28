@@ -1,0 +1,112 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1300px;
+  margin: 0 auto;
+  color: #707070;
+  padding: 0 30px 0 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  padding-top: 30px;
+}
+
+section .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 30px;
+}
+
+section .hero h2 {
+  font-size: 36px;
+  margin-left: 60px;
+}
+
+section .hero h2 b {
+  color: red;
+}
+
+section .hero h1 {
+  width: 80%;
+}
+
+section .hero h1 img {
+  width: 100%;
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+article h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+article .rooms h2 {
+  font-size: 24px;
+}
+
+article .rooms ul {
+  width: 100%;
+  padding: 0;
+}
+
+article .rooms ul li {
+  border: 1px solid #707070;
+  padding: 20px 150px 20px 150px;
+  border-radius: 50px;
+}
+
+article .rooms ul li a {
+  font-size: 21px;
+}
+
+@media screen and (max-width: 860px) {
+
+  section .hero {
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+
+  section .hero h1 {
+    width: 100%;
+  }
+
+  section .hero h2 {
+    padding-top: 30px;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  article .rooms ul li {
+    padding: 20px 100px 20px 100px;
+  }
+
+  article h2 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  article .rooms ul li {
+    padding: 20px 50px 20px 50px;
+  }
+}
