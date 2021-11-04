@@ -33,6 +33,8 @@ header nav a {
   font-size: 18px;
 }
 
-@media screen and (max-width: 959px) {
-
+@media screen and (max-width: 493px) {
+  .header-inner nav {
+    display: flex;
+  } 
 }

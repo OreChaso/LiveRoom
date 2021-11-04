@@ -13,6 +13,12 @@ section .liveList iframe {
   width: 100%;
 }
 
+section .liveList img {
+  max-width: 720px;
+  max-height: 406px;
+  width: 100%;
+}
+
 section .liveList p {
   font-size: 18px;
   margin-bottom: 0;
@@ -76,6 +82,11 @@ section .reserveList ul {
 
 .sheet img {
   width: 100%;
+}
+
+.saron img {
+  width: 300px;
+  height: 500px;
 }
 
 .sheet p {

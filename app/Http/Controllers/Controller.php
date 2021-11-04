@@ -60,7 +60,7 @@ class Controller extends BaseController
             'reserved_time' => $data['reserved_time'],
         ]);
 
-        return redirect(route('/rooms/RoomB'));
+        return redirect('/rooms/RoomB');
     }
 
     public function createReserveRoomC(Request $request) {
@@ -73,7 +73,7 @@ class Controller extends BaseController
             'reserved_time' => $data['reserved_time'],
         ]);
 
-        return redirect(route('/rooms/RoomC'));
+        return redirect('/rooms/RoomC');
     }
 
     public function createReserveRoomD(Request $request) {
@@ -86,7 +86,7 @@ class Controller extends BaseController
             'reserved_time' => $data['reserved_time'],
         ]);
 
-        return redirect(route('/rooms/RoomD'));
+        return redirect('/rooms/RoomD');
     }
 
     /**

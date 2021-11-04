@@ -32,7 +32,6 @@ section .hero {
 
 section .hero h2 {
   font-size: 36px;
-  margin-left: 60px;
 }
 
 section .hero h2 b {
@@ -69,13 +68,24 @@ article .rooms ul {
 }
 
 article .rooms ul li {
+  width: 40%;
+  height: 80px;
   border: 1px solid #707070;
-  padding: 20px 150px 20px 150px;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 article .rooms ul li a {
+  width: 100%;
   font-size: 21px;
+}
+
+@media screen and (max-width: 580px) {
+  article .rooms ul li {
+    padding: 20px 50px 20px 50px;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -97,7 +107,7 @@ article .rooms ul li a {
   }
 
   article .rooms ul li {
-    padding: 20px 100px 20px 100px;
+    padding: 20px 70px 20px 70px;
   }
 
   article h2 {
@@ -105,8 +115,7 @@ article .rooms ul li a {
   }
 }
 
-@media screen and (max-width: 580px) {
-  article .rooms ul li {
-    padding: 20px 50px 20px 50px;
-  }
-}
+
+
+
+
