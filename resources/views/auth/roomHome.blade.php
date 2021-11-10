@@ -30,12 +30,12 @@
     <p>＊以下のRoomはサンプルです</p>
     <div class="w-100 mt-5 rooms">
       <ul class="d-flex justify-content-around">
-        <li class=""><a href="/rooms/RoomA">RoomA（教室モデル）</a></li>
-        <li class=""><a href="/rooms/RoomB">RoomB（サロンモデル）</a></li>
+        <li class=""><a href="/rooms/RoomA">RoomA</a></li>
+        <li class=""><a href="/rooms/RoomB">RoomB</a></li>
       </ul>      
       <ul class="d-flex justify-content-around">
-        <li class=""><a href="/rooms/RoomC">RoomC（会議室モデル）</a></li>
-        <li class=""><a href="/rooms/RoomD">RoomD（ホールモデル）</a></li>
+        <li class=""><a href="/rooms/RoomC">RoomC</a></li>
+        <li class=""><a href="/rooms/RoomD">RoomD</a></li>
       </ul>
   </div>
   </article>

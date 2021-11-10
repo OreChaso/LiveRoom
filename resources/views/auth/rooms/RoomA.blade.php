@@ -19,7 +19,7 @@
   </header>
   <section>
     <div class="liveList">
-        <iframe width="720" height="406" src="https://www.youtube.com/embed/HpdO5Kq3o7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="{{ asset('/img/roomA.png') }}" alt="roomA">
         <div class="liveTitle">
           <p>RoomA（教室モデル）</p>
           <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/40</p>

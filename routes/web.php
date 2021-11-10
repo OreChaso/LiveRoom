@@ -41,6 +41,7 @@ Route::post('/rooms/RoomD',[Controller::class, 'createReserveRoomD'])->name('cre
  */
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('roomHome');
+Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 

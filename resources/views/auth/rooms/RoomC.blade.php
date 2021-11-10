@@ -19,7 +19,8 @@
   </header>
   <section>
     <div class="liveList">
-        <img src="{{ asset('/img/meetingRoom.jpg') }}" alt="">
+        <img src="{{ asset('/img/meetingRoom.png') }}" alt="ミーティングルーム">
+        <p class="state">＊写真はイメージです（写真ACより引用）</p>
         <div class="liveTitle">
           <p>RoomC（会議室モデル）</p>
           <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/10</p>

@@ -19,7 +19,8 @@
   </header>
   <section>
     <div class="liveList">
-      <img src="{{ asset('/img/holeRoom.jpg') }}" alt="">
+      <img src="{{ asset('/img/holeRoom.png') }}" alt="ホール">
+      <p class="state">＊写真はイメージです（写真ACより引用）</p>
         <div class="liveTitle">
           <p>RoomD（ホールモデル）</p>
           <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/75</p>

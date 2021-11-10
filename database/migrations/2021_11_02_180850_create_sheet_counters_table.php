@@ -15,6 +15,7 @@ class CreateSheetCountersTable extends Migration
     {
         Schema::create('sheet_counters', function (Blueprint $table) {
             $table->id();
+            $table->
             $table->timestamps();
         });
     }

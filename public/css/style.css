@@ -78,13 +78,15 @@ article .rooms ul li {
 }
 
 article .rooms ul li a {
-  width: 100%;
   font-size: 21px;
+  width: 100%;
 }
 
 @media screen and (max-width: 580px) {
   article .rooms ul li {
-    padding: 20px 50px 20px 50px;
+    width: 50%;
+    height: 70px;
+    padding: 0;
   }
 }
 
@@ -106,8 +108,9 @@ article .rooms ul li a {
     margin: 0;
   }
 
-  article .rooms ul li {
-    padding: 20px 70px 20px 70px;
+  article .rooms ul li a {
+    white-space: nowrap;
+    font-size: 14px;
   }
 
   article h2 {

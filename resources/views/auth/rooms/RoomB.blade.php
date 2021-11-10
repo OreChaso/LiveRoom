@@ -19,7 +19,8 @@
   </header>
   <section>
     <div class="liveList">
-      <img src="{{ asset('/img/saronRoom.jpg') }}" alt="">
+      <img src="{{ asset('/img/saronRoom.png') }}" alt="サロン">
+      <p class="state">＊写真はイメージです（写真ACより引用）</p>
       <div class="liveTitle">
         <p>RoomB（サロンモデル）</p>
         <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/10</p>
@@ -51,7 +52,7 @@
   </section>
   <div class="sheet saron">
     <p>座席表</p>
-    <img src="{{ asset('/img/美容室サンプル座席表.png')}}" alt="">
+    <img src="{{ asset('/img/saronSheet.png')}}" alt="">
   </div>
   <footer>
     @include('auth.footer')
