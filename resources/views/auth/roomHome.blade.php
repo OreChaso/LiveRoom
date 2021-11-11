@@ -26,18 +26,31 @@
     </div>
   </section>
   <article>
-    <h2>Room一覧</h2>
+    <div class="d-flex justify-content-between roomTitle">
+      <h2>Room一覧</h2>
+      <a href="{{ route('roomForm') }}">新しい部屋を作成</a>
+    </div>
     <p>＊以下のRoomはサンプルです</p>
-    <div class="w-100 mt-5 rooms">
-      <ul class="d-flex justify-content-around">
-        <li class=""><a href="/rooms/RoomA">RoomA</a></li>
-        <li class=""><a href="/rooms/RoomB">RoomB</a></li>
-      </ul>      
-      <ul class="d-flex justify-content-around">
-        <li class=""><a href="/rooms/RoomC">RoomC</a></li>
-        <li class=""><a href="/rooms/RoomD">RoomD</a></li>
+    <div class="rooms samples">
+      <ul class="row justify-content-around">
+        <li class="col-5 mt-4"><a href="/rooms/RoomA">RoomA</a></li>
+        <li class="col-5 mt-4"><a href="/rooms/RoomB">RoomB</a></li>
+        <li class="col-5 mt-4"><a href="/rooms/RoomC">RoomC</a></li>
+        <li class="col-5 mt-4"><a href="/rooms/RoomD">RoomD</a></li>
       </ul>
-  </div>
+    </div>
+    <div class="rooms mt-4">
+      <p>＊新しい部屋の追加・削除のデモンストレーションです。<br>
+        予約機能を体験したい方は上記のサンプルルームでお願いします。
+      </p>
+      <ul class="row justify-content-around">
+        @if(isset($reserves))
+        @foreach($reserves as $reserve)    
+        <li class="col-5 mt-4"><a>{{ $reserve }}</a></li>
+        @endforeach
+        @endif
+      </ul>
+    </div>
   </article>
   <footer>
     @include('auth.footer')

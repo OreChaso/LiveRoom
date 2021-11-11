@@ -21,7 +21,7 @@
     <div class="liveList">
         <img src="{{ asset('/img/roomA.png') }}" alt="roomA">
         <div class="liveTitle">
-          <p>RoomA（教室モデル）</p>
+          <p>RoomA</p>
           <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/40</p>
           <button id="leave" class="btn btn-danger px-3 my-2">退室</button>
         </div>

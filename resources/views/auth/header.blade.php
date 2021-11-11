@@ -11,6 +11,9 @@
         <li class="nav-item active">
           <a class="nav-link" href="/roomHome">ホーム <span class="sr-only">(現位置)</span></a>
         </li>
+        <li class="nav-item">
+          <a href="{{ route('roomForm') }}">新しい部屋を作成</a>
+        </li>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Room一覧

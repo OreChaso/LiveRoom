@@ -19,11 +19,10 @@
   </header>
   <section>
     <div class="liveList">
-      <img src="{{ asset('/img/saronRoom.png') }}" alt="サロン">
-      <p class="state">＊写真はイメージです（写真ACより引用）</p>
+      <img src="{{ asset('/img/roomA.png') }}" alt="サロン">
       <div class="liveTitle">
-        <p>RoomB（サロンモデル）</p>
-        <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/10</p>
+        <p>RoomB</p>
+        <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/38</p>
         <button id="leave" class="btn btn-danger px-3 my-2">退室</button>
       </div>
     </div>
@@ -52,7 +51,7 @@
   </section>
   <div class="sheet saron">
     <p>座席表</p>
-    <img src="{{ asset('/img/saronSheet.png')}}" alt="">
+    <img src="{{ asset('/img/room_502.png')}}" alt="">
   </div>
   <footer>
     @include('auth.footer')
@@ -62,7 +61,7 @@
   var enterButton = document.getElementById("enter"),
     enterCount = 0;
   enterButton.onclick = function() {
-    if(enterCount <= 9) {
+    if(enterCount <= 37) {
     enterCount += 1;
     enterButton.innerHTML = "入室: " + enterCount;
     }

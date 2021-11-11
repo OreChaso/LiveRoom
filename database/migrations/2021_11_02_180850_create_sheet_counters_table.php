@@ -13,9 +13,10 @@ class CreateSheetCountersTable extends Migration
      */
     public function up()
     {
-        Schema::create('sheet_counters', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-            $table->
+            $table->char('name', 100);
+            $table->char('url', 100);
             $table->timestamps();
         });
     }

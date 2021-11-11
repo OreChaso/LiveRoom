@@ -18,6 +18,7 @@ use App\Http\Livewire\Counter;
 */
 
 Route::get('/roomHome', [Controller::class, 'rooms'])->name('rooms');
+Route::get('/roomForm', [Controller::class, 'roomForm'])->name('roomForm');
 Route::get('/about', [Controller::class, 'showAbout'])->name('showAbout');
 
 /**
@@ -35,6 +36,16 @@ Route::post('/rooms/RoomA',[Controller::class, 'createReserveRoomA'])->name('cre
 Route::post('/rooms/RoomB',[Controller::class, 'createReserveRoomB'])->name('createReserveRoomB');
 Route::post('/rooms/RoomC',[Controller::class, 'createReserveRoomC'])->name('createReserveRoomC');
 Route::post('/rooms/RoomD',[Controller::class, 'createReserveRoomD'])->name('createReserveRoomD');
+
+/**
+ * Room取得
+ */
+Route::get('/roomHome',[Controller::class, 'getRoom'])->name('getRoom');
+
+/**
+ * Room新規作成
+ */
+Route::post('/auth/roomHome',[Controller::class, 'newRoom'])->name('newRoom');
 
 /**
  * ログインルート

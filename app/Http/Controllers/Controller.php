@@ -28,6 +28,11 @@ class Controller extends BaseController
         return view('auth.roomHome');
     }
 
+    public function roomForm()
+    {
+        return view('auth.roomForm');
+    }
+
     public function showAbout()
     {
         return view('auth.about');
@@ -129,6 +134,31 @@ class Controller extends BaseController
         $reserves = DB::table('room504s')->whereDate('reserved_at', '=', $date)->pluck('reserved_time');
 
         return view('auth.rooms.RoomD', [
+            'reserves' => $reserves,
+        ]);
+    }
+
+    /**
+     * Room新規作成
+     */
+    public function newRoom(Request $request) {
+        $data = $request->all();
+
+        \DB::table('rooms')->insert([
+            'name' => $data['name'],
+            'url' => $data['url'],
+        ]);
+
+        return redirect('/roomHome');
+    }
+
+    /**
+     * Room情報取得
+     */
+    public function getRoom() {
+        $reserves = DB::table('rooms')->pluck('name');
+
+        return view('auth.roomHome', [
             'reserves' => $reserves,
         ]);
     }
