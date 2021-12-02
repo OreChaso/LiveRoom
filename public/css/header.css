@@ -1,40 +1,35 @@
-header {
 
-}
-
-.header-inner {
+nav {
   max-height: 100px;
-  display: flex;
-  align-items: center;
-}
-
-.header-inner nav {
-  width: 100%;
   border-bottom: 1px solid #707070;
   padding: 0;
 }
 
-.header-inner img {
+nav .collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a img {
   padding-top: 20px;
   width: 30%;
 }
 
-header nav ul {
+nav ul {
   display: flex;
   align-items: center;
-  margin-bottom: 0;
 }
 
-header nav ul li {
+nav ul li {
   margin-right: 30px;
 }
 
-header nav a {
+nav a {
   font-size: 18px;
 }
 
 @media screen and (max-width: 493px) {
-  .header-inner nav {
+  nav {
     display: flex;
   } 
 }

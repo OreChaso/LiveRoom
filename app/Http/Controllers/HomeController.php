@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,11 +26,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('auth.roomHome');
+        $reserves = DB::table('rooms')->pluck('name');
+
+        return view('auth.roomHome', [
+            'reserves' => $reserves,
+        ]);
     }
 
-    public function home()
+    public function showLoginForm()
     {
-        return view('auth.home');
+        return view('auth.login');  //変更
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('user')->logout();  //変更
+        $request->session()->flush();
+        $request->session()->regenerate();
+
+        return redirect('/login');  //変更
     }
 }

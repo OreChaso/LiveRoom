@@ -7,36 +7,12 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Reserve;
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
+
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-
-    public function rooms()
-    {
-        return view('auth.roomHome');
-    }
-
-    public function roomForm()
-    {
-        return view('auth.roomForm');
-    }
-
-    public function showAbout()
-    {
-        return view('auth.about');
-    }
 
     /**
      * 予約機能
@@ -137,31 +113,5 @@ class Controller extends BaseController
             'reserves' => $reserves,
         ]);
     }
-
-    /**
-     * Room新規作成
-     */
-    public function newRoom(Request $request) {
-        $data = $request->all();
-
-        \DB::table('rooms')->insert([
-            'name' => $data['name'],
-            'url' => $data['url'],
-        ]);
-
-        return redirect('/roomHome');
-    }
-
-    /**
-     * Room情報取得
-     */
-    public function getRoom() {
-        $reserves = DB::table('rooms')->pluck('name');
-
-        return view('auth.roomHome', [
-            'reserves' => $reserves,
-        ]);
-    }
-
 }
 

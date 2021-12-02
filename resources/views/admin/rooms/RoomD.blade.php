@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/room.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
+  <style>body{background-color: tomato;}</style>
   <script src="{{ asset('/js/app.js') }}"></script>
   <script src="https://kit.fontawesome.com/fe2ae2a4f6.js" crossorigin="anonymous"></script>
   <title>LiveRoom</title>
@@ -16,16 +17,16 @@
 <body>
   <main>
   <header>
-    @include('auth.header')
+    @include('admin.header')
   </header>
   <section>
     <div class="liveList">
-      <iframe width="560" height="405" src="https://www.youtube.com/embed/gtOJtJbwapI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="liveTitle">
-        <p>RoomB</p>
-        <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/38</p>
-        <button id="leave" class="btn btn-danger px-3 my-2">退室</button>
-      </div>
+      <iframe width="560" height="405" src="https://www.youtube.com/embed/MKJkmtPKmIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="liveTitle">
+          <p>RoomD</p>
+          <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/36</p>
+          <button id="leave" class="btn btn-danger px-3 my-2">退室</button>
+        </div>
     </div>
     <div class="reserveList">
       <div class="reserveList-title">
@@ -33,21 +34,12 @@
         <p><?= date('m/d') ?></p>
       </div>
         <ul>
+          @if(isset($reserves))
           @foreach($reserves as $reserve)    
             <li><p>{{ $reserve }}</p></li>
           @endforeach
+          @endif
         </ul>
-      <div class="reserveList-title">
-        <h2>予約フォーム</h2>
-      </div>
-      <form action="{{route('createReserveRoomB')}}" method="post" class="reserveForm">
-        @csrf
-        <ul>
-          <li><p>日付</p><input type="date" name="reserved_at" required></li>
-          <li><p>時間</p><input type="text" name="reserved_time" list="reserved_time" required></li>
-          <li><input type="submit" value="予約" class="btn btn-danger px-3 my-4"></li>
-        </ul>
-      </form>
     </div>
   </section>
   <datalist id="reserved_time">
@@ -73,18 +65,18 @@
   </datalist>
   <div class="sheet">
     <p>座席表</p>
-    <img src="{{ asset('/img/room_502.png')}}" alt="">
+    <img src="{{ asset('/img/room_504.png')}}" alt="">
   </div>
   <footer>
-    @include('auth.footer')
+    @include('admin.footer')
   </footer>
-  </main>
+</main>
 </body>
 <script>
   var enterButton = document.getElementById("enter"),
     enterCount = 0;
   enterButton.onclick = function() {
-    if(enterCount <= 37) {
+    if(enterCount <= 35) {
     enterCount += 1;
     enterButton.innerHTML = "入室: " + enterCount;
     }

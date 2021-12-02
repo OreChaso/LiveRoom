@@ -14,12 +14,13 @@
   <title>LiveRoom</title>
 </head>
 <body>
+  <main>
   <header>
     @include('auth.header')
   </header>
   <section>
     <div class="liveList">
-        <img src="{{ asset('/img/roomA.png') }}" alt="roomA">
+      <iframe width="560" height="405" src="https://www.youtube.com/embed/WsJMq3fcqoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="liveTitle">
           <p>RoomA</p>
           <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/40</p>
@@ -77,6 +78,7 @@
   <footer>
     @include('auth.footer')
   </footer>
+</main>
 </body>
 <script>
   var enterButton = document.getElementById("enter"),

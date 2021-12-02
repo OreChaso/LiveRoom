@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
+  <style>body{background-color: tomato;}</style>
   <script src="{{ asset('/js/app.js') }}"></script>
   <script src="https://kit.fontawesome.com/fe2ae2a4f6.js" crossorigin="anonymous"></script>
   <title>LiveRoom</title>
 </head>
 <body>
+  <main>
   <header>
-    @include('auth.header')
+    @include('admin.header')
   </header>
-  <article>
+  <article class="roomForm">
     <form action="{{ route('newRoom') }}" method="post">
       @csrf
       <div class="mb-3">
@@ -30,3 +32,5 @@
       <button type="submit" class="btn btn-primary">作成</button>
     </form>
   </article>
+</main>
+</body>

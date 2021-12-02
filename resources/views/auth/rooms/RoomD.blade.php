@@ -14,12 +14,13 @@
   <title>LiveRoom</title>
 </head>
 <body>
+  <main>
   <header>
     @include('auth.header')
   </header>
   <section>
     <div class="liveList">
-      <img src="{{ asset('/img/roomA.png') }}" alt="ホール">
+      <iframe width="560" height="405" src="https://www.youtube.com/embed/MKJkmtPKmIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="liveTitle">
           <p>RoomD</p>
           <button id="enter" class="btn btn-danger px-2 my-2">入室: 0</button><p>/36</p>
@@ -43,12 +44,33 @@
         @csrf
         <ul>
           <li><p>日付</p><input type="date" name="reserved_at" required></li>
-          <li><p>時間</p><input type="time" name="reserved_time" step="900" value="09:00" min="09:00" max="18:00" required></li>
+          <li><p>時間</p><input type="text" name="reserved_time" list="reserved_time" required></li>
           <li><input type="submit" value="予約" class="btn btn-danger px-3 my-4"></li>
         </ul>
       </form>
     </div>
   </section>
+  <datalist id="reserved_time">
+    <option value="09:00"></option>
+    <option value="09:30"></option>
+    <option value="10:00"></option>
+    <option value="10:30"></option>
+    <option value="11:00"></option>
+    <option value="11:30"></option>
+    <option value="12:00"></option>
+    <option value="12:30"></option>
+    <option value="13:00"></option>
+    <option value="13:30"></option>
+    <option value="14:00"></option>
+    <option value="14:30"></option>
+    <option value="15:00"></option>
+    <option value="15:30"></option>
+    <option value="16:00"></option>
+    <option value="16:30"></option>
+    <option value="17:00"></option>
+    <option value="17:30"></option>
+    <option value="18:00"></option>
+  </datalist>
   <div class="sheet">
     <p>座席表</p>
     <img src="{{ asset('/img/room_504.png')}}" alt="">
@@ -56,6 +78,7 @@
   <footer>
     @include('auth.footer')
   </footer>
+</main>
 </body>
 <script>
   var enterButton = document.getElementById("enter"),

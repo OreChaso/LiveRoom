@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/footer.css') }}">
+  <style>body{background-color: tomato;}</style>
   <script src="{{ asset('/js/app.js') }}"></script>
   <script src="https://kit.fontawesome.com/fe2ae2a4f6.js" crossorigin="anonymous"></script>
   <title>LiveRoom</title>
@@ -15,44 +16,36 @@
 <body>
   <main>
   <header>
-    @include('auth.header')
+    @include('admin.header')
   </header>
-  <section>
-    <div class="hero">
-      <h2>
-        簡単予約<br>
-        <b>Live</b>Room
-      </h2>
-      <h1><img src="{{ asset('/img/HowToLiveRoom.png')}}" alt="LiveRoom"></h1>
-    </div>
-  </section>
   <article>
     <div class="d-flex justify-content-between roomTitle">
-      <h2>Rooms</h2>
+      <h2>Room一覧</h2>
     </div>
     <p>＊以下のRoomはサンプルです</p>
     <div class="rooms samples">
       <ul class="row justify-content-around">
-        <li class="col-5 mt-4"><a href="/rooms/RoomA">RoomA</a></li>
-        <li class="col-5 mt-4"><a href="/rooms/RoomB">RoomB</a></li>
-        <li class="col-5 mt-4"><a href="/rooms/RoomC">RoomC</a></li>
-        <li class="col-5 mt-4"><a href="/rooms/RoomD">RoomD</a></li>
+        <li class="col-5 mt-4"><a href="{{ route('adminShowRoomA') }}">RoomA</a></li>
+        <li class="col-5 mt-4"><a href="{{ route('adminShowRoomB') }}">RoomB</a></li>
+        <li class="col-5 mt-4"><a href="{{ route('adminShowRoomC') }}">RoomC</a></li>
+        <li class="col-5 mt-4"><a href="{{ route('adminShowRoomD') }}">RoomD</a></li>
       </ul>
     </div>
     <div class="rooms mt-4">
-      <p>＊新しく作成された部屋が表示されます。</p>
+      <p>＊新しく作成された部屋が表示されます。<br>
+        予約機能を体験したい方は上記のサンプルルームでお願いします。
+      </p>
       <ul class="row justify-content-around">
-        @if(isset($reserves))
+        {{-- @if(isset($reserves)) --}}
         @foreach($reserves as $reserve)    
         <li class="col-5 mt-4"><a>{{ $reserve }}</a></li>
         @endforeach
-        @endif
+        {{-- @endif --}}
       </ul>
     </div>
   </article>
   <footer>
-    @include('auth.footer')
+    @include('admin.footer')
   </footer>
-</main>
-</body>
+  </main>
 </html>
